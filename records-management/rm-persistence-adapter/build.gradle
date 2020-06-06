@@ -1,0 +1,36 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.0.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.scube'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation project(':rm-common')
+	implementation project(':rm-core')
+	
+	compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	
+	compile group: 'com.github.paulcwarren', name: 'spring-content-commons', version: '1.1.0.M1'
+	testCompile group: 'com.github.paulcwarren', name: 'spring-content-fs-boot-starter', version: '1.1.0.M1'
+	compile group: 'com.github.paulcwarren', name: 'spring-content-elasticsearch-boot-starter', version: '1.1.0.M1'
+	compile group: 'org.elasticsearch.client', name: 'elasticsearch-rest-high-level-client', version: '7.6.2'
+	
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
