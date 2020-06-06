@@ -1,4 +1,4 @@
-package com.scube.rm.core.port.in;
+package com.scube.rm.core.input.port;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;

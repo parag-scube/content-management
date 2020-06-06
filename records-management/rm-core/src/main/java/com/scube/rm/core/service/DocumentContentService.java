@@ -6,10 +6,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.scube.rm.common.UseCase;
-import com.scube.rm.core.port.in.DocumentContentUseCase;
-import com.scube.rm.core.port.out.DocumentDBPersistencePort;
-import com.scube.rm.core.port.out.DocumentESIndexingPort;
-import com.scube.rm.core.port.out.DocumentFSPersistencePort;
+import com.scube.rm.core.input.port.DocumentContentUseCase;
+import com.scube.rm.core.output.port.DocumentDBPersistencePort;
+import com.scube.rm.core.output.port.DocumentESIndexingPort;
+import com.scube.rm.core.output.port.DocumentFSPersistencePort;
 
 import lombok.RequiredArgsConstructor;
 
